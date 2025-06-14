@@ -1,0 +1,7 @@
+pandas
+wordcloud
+matplotlib
+nltk
+numpy
+pillow
+pymorphy3

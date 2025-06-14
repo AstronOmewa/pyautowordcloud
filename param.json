@@ -1,0 +1,7 @@
+{
+    "width":1980,
+    "height":1250,
+    "background_color":"black",
+    "colormap":"viridis",
+    "max_words":1000
+}
