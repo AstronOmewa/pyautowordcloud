@@ -72,7 +72,7 @@ def count_word_frequency(messages):
     return Counter(all_lemmas).most_common()
 
 if __name__ == "__main__":
-    file_path = 'result.json'  # Путь к JSON-файлу result
+    file_path = 'result-0.json'  # Путь к JSON-файлу result
     chat_data = load_chat_history(file_path)
     messages = extract_messages(chat_data)
     lemma_freq = count_word_frequency(messages)
@@ -95,7 +95,7 @@ if __name__ == "__main__":
 # Загрузка стоп-слов
 nltk.download('stopwords')
 stop_words = set(stopwords.words('russian')).union(set(stopwords.words('english'))).union(open('stopw.txt').readlines())
-custom_stopwords = {'этот', 'это', 'вот', 'ну', 'да', 'нет', 'ещё', 'уже', 'который', 'весь', 'чтоть'}
+custom_stopwords = {'этот', 'это', 'вот', 'ну', 'да', 'нет', 'ещё', 'уже', 'который', 'весь', 'чтоть','это','то','весь'}
 stop_words.update(custom_stopwords)
 # print(stop_words)
 
@@ -109,8 +109,7 @@ def clean_text(text):
 
 # Загрузка данных
 file_path = 'lemma_frequency.csv'
-mask_path = "D:\\omewa_bots\\star.png"  # Путь к вашему изображению-маске
-mask = np.array(Image.open(mask_path))
+
 df = pd.read_csv(file_path)
 
 # Определение текстовой колонки
